@@ -1,0 +1,132 @@
+/* global Var */
+:root {
+  --Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+  --White-Card: #fefeff;
+  --Title-Card: 16px;
+  --Content-Card: 13px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: var(--Light-Grayish-Blue);
+  height: 100%;
+  display: flex;
+  padding: 20% 8%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* style of component card */
+/* Response in mobile */
+.wrapper-card {
+  background-color: var(--White-Card);
+  display: flex;
+  flex-flow: column wrap;
+  width: inherit;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
+}
+.card-img {
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.card-content {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 15% 10% 5% 10%;
+}
+
+.card-content > h3 {
+  font-size: var(--Title-Card);
+  color: var(--Dark-Grayish-Blue);
+  font-weight: 700;
+}
+
+.card-content > p {
+  font-size: var(--Content-Card);
+  color: var(--Desaturated-Dark-Blue);
+  font-weight: 500;
+  padding: 1em 0 2em 0;
+}
+
+.card-content-data-user {
+  display: flex;
+  width: inherit;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.data-user-img {
+  max-width: 45px;
+  max-height: 45px;
+  border-radius: 50%;
+}
+
+.data-user-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: -2em;
+}
+
+.data-user-content > h3 {
+  font-size: var(--Content-Card);
+  color: var(--Dark-Grayish-Blue);
+  font-weight: 700;
+}
+
+.data-user-content > p {
+  font-size: var(--Content-Card);
+  color: var(--Grayish-Blue);
+  font-weight: 500;
+}
+
+.data-user-btn-share {
+  background: var(--Light-Grayish-Blue);
+
+  display: block;
+  float: left;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*space between*/ /* or 50% width & line-height */
+}
+
+/* Response in table, laptop and desktop */
+@media (min-width: 768px) {
+  body {
+    height: 100%;
+  }
+  .wrapper-card {
+    flex-flow: row;
+    width: 670px;
+    height: 270px;
+  }
+  .card-img {
+    max-width: 40%;
+    border-radius: 10px 0 0 10px;
+  }
+  .card-content {
+    padding: 5% 3% 4% 3%;
+  }
+}
+
+/* Footer */
+footer {
+  font-size: 11px;
+  text-align: center;
+}
+footer a {
+  color: hsl(228, 45%, 44%);
+}
